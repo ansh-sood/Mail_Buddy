@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-mail</title>
+</head>
+
+<body>
+<div style="text-align: center"><h2><b>E-mail Details</b></h2></div>
+    {% load mathfilters %}
+    {% for i in sub %}
+        {%  if forloop.counter0|divisibleby:4 %}{{ forloop.counter0|add:4|div:4 }}.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{% endif %}
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ i }}<br>
+        {%  if forloop.counter|divisibleby:4 %}<hr>{% endif %}
+    {% endfor %}
+
+</body>
+</html>
